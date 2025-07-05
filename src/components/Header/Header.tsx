@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FaGithub, FaTelegram } from 'react-icons/fa';
+import { ToggleTheme } from './ToggleTheme';
 
 export const Header = () => {
   return (
@@ -9,7 +10,7 @@ export const Header = () => {
           kikko
         </Link>
 
-        <ul className="flex gap-4 text-2xl">
+        <ul className="flex items-center gap-4 text-2xl">
           <li className="rounded-md p-2 transition-all duration-150 ease-in-out hover:bg-black/10">
             <Link href="https://t.me/takedelight">
               <FaTelegram />
@@ -19,6 +20,9 @@ export const Header = () => {
             <Link href="https://github.com/OleksiyNikolaenko">
               <FaGithub />
             </Link>
+          </li>
+          <li>
+            <ToggleTheme />
           </li>
         </ul>
       </nav>

@@ -1,2 +1,2 @@
 export { Header } from './Header/Header';
-export * from './ui/button';
+export { Button } from './ui/button';
