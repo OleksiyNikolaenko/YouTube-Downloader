@@ -7,7 +7,6 @@ import { Button } from '..';
 
 export const ToggleTheme = () => {
   const { resolvedTheme, setTheme } = useTheme();
-  console.log(resolvedTheme);
   return (
     <Button
       onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
