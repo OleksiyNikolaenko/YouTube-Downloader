@@ -7,11 +7,15 @@ import './globals.css';
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
+  display: 'swap',
+  preload: false,
 });
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+  display: 'swap',
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -27,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex h-screen flex-col antialiased`}>
+        className={`${geistSans.variable} ${geistMono.variable} flex h-screen flex-col`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Header />
           <main className="flex-1">{children}</main>
