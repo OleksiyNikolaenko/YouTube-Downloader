@@ -1,3 +1,9 @@
+import { SearchInput } from './SearchInput';
+
 export const SearchBar = () => {
-  return <></>;
+  return (
+    <>
+      <SearchInput />
+    </>
+  );
 };

@@ -1,5 +1,5 @@
 import { Header } from '@/components';
-import { ThemeProvider } from '@/providers';
+import { SearchProvider, ThemeProvider } from '@/providers';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -34,7 +34,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} flex h-screen flex-col`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Header />
-          <main className="flex-1">{children}</main>
+          <SearchProvider>
+            <main className="flex-1">{children}</main>
+          </SearchProvider>
         </ThemeProvider>
       </body>
     </html>
