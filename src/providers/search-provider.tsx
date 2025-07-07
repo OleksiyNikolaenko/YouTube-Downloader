@@ -1,6 +1,7 @@
 'use client';
 
 import { SearchContext } from '@/context';
+import { getVideoIdFromURL } from '@/lib/getVideoIdFromURL';
 import { isURL } from '@/lib/isURL';
 import {
   ChangeEvent,
@@ -25,9 +26,11 @@ export const SearchProvider = ({ children }: PropsWithChildren) => {
     }
   }, []);
 
+  const id = getVideoIdFromURL(inputValue);
+
   const values = useMemo(
-    () => ({ inputValue, error, handleChange }),
-    [inputValue, error, handleChange],
+    () => ({ inputValue, error, handleChange, id }),
+    [inputValue, error, handleChange, id],
   );
 
   return (

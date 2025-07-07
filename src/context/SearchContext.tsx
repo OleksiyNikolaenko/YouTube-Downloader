@@ -6,6 +6,7 @@ interface Context {
   inputValue: string;
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   error: Error | null;
+  id: string | null;
 }
 
 export const SearchContext = createContext<Context | null>(null);
