@@ -5,3 +5,4 @@ export * from './ui/card';
 export * from './ui/dropdown-menu';
 export * from './ui/input';
 export * from './ui/scroll-area';
+export * from './ui/spinner';

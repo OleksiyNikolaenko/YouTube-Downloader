@@ -21,8 +21,6 @@ export const useFetch = <T>(url: string, id: string | null) => {
         });
         const data = await response.json();
 
-        console.log('Fetched data:', data);
-
         setData(data);
       } catch (error) {
         if (error instanceof Error) {

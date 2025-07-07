@@ -12,8 +12,9 @@ import {
 } from 'react';
 
 export const SearchProvider = ({ children }: PropsWithChildren) => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('h');
   const [error, setError] = useState<Error | null>(null);
+  const [quality, setQuality] = useState<number>(399);
 
   const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -26,11 +27,11 @@ export const SearchProvider = ({ children }: PropsWithChildren) => {
     }
   }, []);
 
-  const id = getVideoIdFromURL(inputValue);
+  const id = inputValue ? getVideoIdFromURL(inputValue) : null;
 
   const values = useMemo(
-    () => ({ inputValue, error, handleChange, id }),
-    [inputValue, error, handleChange, id],
+    () => ({ inputValue, error, handleChange, id, quality, setQuality }),
+    [inputValue, error, handleChange, id, quality, setQuality],
   );
 
   return (
