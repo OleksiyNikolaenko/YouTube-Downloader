@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaGithub, FaTelegram } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { ToggleTheme } from './ToggleTheme';
 
 export const Header = () => {
@@ -11,11 +11,6 @@ export const Header = () => {
         </Link>
 
         <ul className="flex items-center gap-4 text-2xl">
-          <li className="rounded-md p-2 transition-all duration-150 ease-in-out hover:bg-black/10">
-            <Link href="https://t.me/takedelight">
-              <FaTelegram />
-            </Link>
-          </li>
           <li className="rounded-md p-2 transition-all duration-150 ease-in-out hover:bg-black/10">
             <Link href="https://github.com/OleksiyNikolaenko">
               <FaGithub />

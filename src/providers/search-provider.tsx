@@ -12,7 +12,7 @@ import {
 } from 'react';
 
 export const SearchProvider = ({ children }: PropsWithChildren) => {
-  const [inputValue, setInputValue] = useState('h');
+  const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState<Error | null>(null);
   const [quality, setQuality] = useState<number>(399);
 

@@ -1,5 +1,9 @@
+export { DownloadButton } from './DownloadButton/DownloadButton';
 export { Header } from './Header/Header';
-export { SearchBar } from './SearchBar/SearchBar';
+export { QualityList } from './QualityList/QualityList';
+export { QualityListItem } from './QualityListItem/QualityListItem';
+export { SearchForm } from './SearchForm/SearchForm';
+export { SearchPanel } from './SearchPanel/SearchPanel';
 export { Button } from './ui/button';
 export * from './ui/card';
 export * from './ui/dropdown-menu';

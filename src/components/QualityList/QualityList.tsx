@@ -2,6 +2,7 @@
 
 import { useSearch } from '@/hooks';
 import { useFetch } from '@/hooks/useFetch';
+import { QualityListItem } from '../QualityListItem/QualityListItem';
 import { ScrollArea } from '../ui/scroll-area';
 import { Spinner } from '../ui/spinner';
 
@@ -15,7 +16,7 @@ interface Quality {
 }
 
 export const QualityList = () => {
-  const { id, quality, setQuality, inputValue } = useSearch();
+  const { id, inputValue } = useSearch();
   const { data, isLoading } = useFetch<Quality[]>(
     `${process.env.NEXT_PUBLIC_API_URL}/get_available_quality/${id}`,
     id,
@@ -39,12 +40,12 @@ export const QualityList = () => {
                 ?.filter((item) => item.type === 'video')
                 .map((item) => {
                   return (
-                    <li
-                      className={`my-1 flex cursor-pointer justify-between rounded-md border px-3 py-2 transition-all duration-150 ease-in-out empty:hidden hover:opacity-50 ${quality === item.id ? 'border-primary' : ''}`}
+                    <QualityListItem
                       key={item.size}
-                      onClick={() => setQuality(item.id)}>
-                      <span className="text-xl">{item.quality}</span>
-                    </li>
+                      id={item.id}
+                      alias={item.quality}
+                      bitrate={item.bitrate}
+                    />
                   );
                 })}
             </ul>

@@ -1,16 +1,18 @@
 'use client';
 
 import { useSearch } from '@/hooks';
-import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { IoArrowDownSharp } from 'react-icons/io5';
 import { Button } from '../ui/button';
-import { Input } from '../ui/input';
+import { Spinner } from '../ui/spinner';
 
-export const SearchInput = () => {
-  const { handleChange, inputValue, error, id, quality } = useSearch();
+export const DownloadButton = () => {
+  const [isLoading, setLoading] = useState(false);
+  const { id, quality } = useSearch();
 
-  const { push } = useRouter();
   const getVideo = async () => {
+    setLoading(true);
+
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/download_video/${id}?quality=${quality}`,
       {
@@ -25,21 +27,22 @@ export const SearchInput = () => {
     if (data?.file) {
       window.location.href = data.file;
     }
+
+    setLoading(false);
   };
 
   return (
-    <>
-      <div className="flex flex-col items-center gap-3 lg:flex-row lg:gap-1">
-        <Input value={inputValue} onChange={handleChange} />
-        <Button onClick={() => getVideo()} className="w-full lg:w-auto">
+    <Button
+      disabled={isLoading}
+      onClick={() => getVideo()}
+      className="w-full lg:w-auto">
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
           Завантажити <IoArrowDownSharp />
-        </Button>
-      </div>
-      {error && (
-        <span className="mt-2 block text-center text-red-800">
-          {error.message}
-        </span>
+        </>
       )}
-    </>
+    </Button>
   );
 };
