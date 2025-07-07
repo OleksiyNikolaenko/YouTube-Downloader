@@ -21,6 +21,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'YouTube Donwloader',
   description: 'завантажити відео з YouTube',
+  icons: {
+    icon: '/favicon.ico',
+    apple: ['/apple-touch-icon.png'],
+  },
 };
 
 export default function RootLayout({
