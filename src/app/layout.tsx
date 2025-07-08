@@ -1,16 +1,16 @@
 import { Header } from '@/components';
 import { SearchProvider, ThemeProvider } from '@/providers';
 import type { Metadata } from 'next';
-import { Mochiy_Pop_One, Poppins } from 'next/font/google';
+import { Manrope, Mochiy_Pop_One } from 'next/font/google';
 import './globals.css';
 
 const mochiy = Mochiy_Pop_One({
   weight: ['400'],
-  variable: '--font-mochiy-pro',
+  variable: '--font-mochiy-pop',
 });
 
-const poppins = Poppins({
-  variable: '--font-poppins',
+const manrope = Manrope({
+  variable: '--font-manrope',
   weight: ['400', '500', '600', '700'],
 });
 
@@ -29,10 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="uk" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} {${mochiy.variable}} flex h-screen flex-col`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        className={`${manrope.variable} ${mochiy.variable} flex h-screen flex-col`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           <SearchProvider>
             <main className="flex-1">{children}</main>
