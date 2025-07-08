@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 body {
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-poppins);
 }
 
 @theme inline {

@@ -6,6 +6,7 @@ export { SearchForm } from './SearchForm/SearchForm';
 export { SearchPanel } from './SearchPanel/SearchPanel';
 export { Button } from './ui/button';
 export * from './ui/card';
+export * from './ui/drawer';
 export * from './ui/dropdown-menu';
 export * from './ui/input';
 export * from './ui/scroll-area';

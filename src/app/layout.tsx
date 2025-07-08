@@ -1,21 +1,17 @@
 import { Header } from '@/components';
 import { SearchProvider, ThemeProvider } from '@/providers';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-  display: 'swap',
-  preload: false,
+const mochiy = Mochiy_Pop_One({
+  weight: ['400'],
+  variable: '--font-mochiy-pro',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-  display: 'swap',
-  preload: false,
+const poppins = Poppins({
+  variable: '--font-poppins',
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -35,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex h-screen flex-col`}>
+        className={`${poppins.variable} {${mochiy.variable}} flex h-screen flex-col`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Header />
           <SearchProvider>
