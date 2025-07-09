@@ -1,4 +1,5 @@
 export { DownloadButton } from './DownloadButton/DownloadButton';
+export { FeaturesPanel } from './FeaturesPanel/FeaturesPanel';
 export { GuidePannel } from './GuidePanel/GuidePanel';
 export { Header } from './Header/Header';
 export { QualityList } from './QualityList/QualityList';

@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader } from '../ui/card';
 export const SearchPanel = () => {
   return (
     <section>
-      <Card className="h-[550px] w-[900px] md:h-[400px]">
+      <Card className="h-[550px] sm:w-[550px] md:h-[400px] lg:w-[900px]">
         <CardHeader className="text-center">
           <div className="flex flex-col items-center gap-6">
             <Image src="/yt.svg" alt="you tube logo" width={100} height={100} />

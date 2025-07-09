@@ -4,7 +4,7 @@ import { ToggleTheme } from './ToggleTheme';
 
 export const Header = () => {
   return (
-    <header className="mb-5 py-4 shadow-md">
+    <header className="font-manrope mb-5 py-4 shadow-md">
       <nav className="container mx-auto flex items-center justify-between px-2">
         <Link className="text-2xl font-semibold" href="/">
           kikko

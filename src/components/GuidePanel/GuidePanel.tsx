@@ -27,11 +27,11 @@ export const GuidePannel = () => {
         Найпростіший гайд із завантаження відео з YouTube
       </p>
 
-      <ul className="mt-5 flex gap-8">
+      <ul className="mt-5 flex flex-col items-center justify-center gap-8 md:flex-row md:flex-wrap">
         {steps.map((step) => {
           return (
             <li className="group shadow-xs" key={step.id}>
-              <Card className="w-[340px] text-center">
+              <Card className="text-center sm:w-[340px]">
                 <CardHeader className="w-full">
                   <div className="mb-2 flex items-center justify-center">
                     <span className="group-hover:text-primary group-hover:border-primary flex h-24 w-24 items-center justify-center rounded-full border-4 text-[58px] leading-none text-gray-300 transition-all duration-150 ease-in-out">
