@@ -1,21 +1,17 @@
-import { Header } from '@/components';
+import { Footer, Header } from '@/components';
 import { SearchProvider, ThemeProvider } from '@/providers';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Manrope, Mochiy_Pop_One } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-  display: 'swap',
-  preload: false,
+const mochiy = Mochiy_Pop_One({
+  weight: ['400'],
+  variable: '--font-mochiy-pop',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-  display: 'swap',
-  preload: false,
+const manrope = Manrope({
+  variable: '--font-manrope',
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -33,15 +29,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html className="scroll-smooth" lang="uk" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex h-screen flex-col`}>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        className={`${manrope.variable} ${mochiy.variable} flex h-screen flex-col`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           <SearchProvider>
             <main className="flex-1">{children}</main>
           </SearchProvider>
         </ThemeProvider>
+        <Footer />
       </body>
     </html>
   );

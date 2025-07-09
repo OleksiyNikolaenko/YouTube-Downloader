@@ -4,7 +4,6 @@ import { useSearch } from '@/hooks';
 import { useState } from 'react';
 import { IoArrowDownSharp } from 'react-icons/io5';
 import { Button } from '../ui/button';
-import { Spinner } from '../ui/spinner';
 
 export const DownloadButton = () => {
   const [isLoading, setLoading] = useState(false);
@@ -35,14 +34,8 @@ export const DownloadButton = () => {
     <Button
       disabled={isLoading}
       onClick={() => getVideo()}
-      className="w-full lg:w-auto">
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        <>
-          Завантажити <IoArrowDownSharp />
-        </>
-      )}
+      className="font-manrope flex w-full items-center px-4 py-6 text-lg md:w-auto lg:w-auto">
+      <IoArrowDownSharp /> <p>Завантажити</p>
     </Button>
   );
 };
