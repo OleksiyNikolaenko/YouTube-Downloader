@@ -1,4 +1,4 @@
-import { Header } from '@/components';
+import { Footer, Header } from '@/components';
 import { SearchProvider, ThemeProvider } from '@/providers';
 import type { Metadata } from 'next';
 import { Manrope, Mochiy_Pop_One } from 'next/font/google';
@@ -38,6 +38,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
           </SearchProvider>
         </ThemeProvider>
+        <Footer />
       </body>
     </html>
   );
