@@ -7,11 +7,13 @@ import './globals.css';
 const mochiy = Mochiy_Pop_One({
   weight: ['400'],
   variable: '--font-mochiy-pop',
+  subsets: ['latin'],
 });
 
 const manrope = Manrope({
   variable: '--font-manrope',
   weight: ['400', '500', '600', '700'],
+  subsets: ['cyrillic', 'latin'],
 });
 
 export const metadata: Metadata = {
