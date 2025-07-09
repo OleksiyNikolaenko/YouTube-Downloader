@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk" suppressHydrationWarning>
+    <html className="scroll-smooth" lang="uk" suppressHydrationWarning>
       <body
         className={`${manrope.variable} ${mochiy.variable} flex h-screen flex-col`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
