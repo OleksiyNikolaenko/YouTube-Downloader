@@ -14,7 +14,7 @@ import {
 export const SearchProvider = ({ children }: PropsWithChildren) => {
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState<Error | null>(null);
-  const [quality, setQuality] = useState<number>(399);
+  const [quality, setQuality] = useState<number>(251);
 
   const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;

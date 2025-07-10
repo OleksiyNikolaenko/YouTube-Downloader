@@ -1,6 +1,5 @@
 'use client';
 
-import { DownloadButton } from '@/components';
 import { useSearch } from '@/hooks';
 import { Input } from '../ui/input';
 
@@ -16,7 +15,6 @@ export const SearchForm = () => {
           placeholder="URL-адреса"
           className="px-4 py-6 placeholder:text-base sm:text-lg lg:text-xl lg:placeholder:text-xl"
         />
-        <DownloadButton />
       </div>
       {error && (
         <span className="mt-2 block text-center text-red-800">
