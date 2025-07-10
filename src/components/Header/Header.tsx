@@ -17,9 +17,6 @@ export const Header = () => {
           <li className="hover:text-primary rounded-md p-2 transition-all duration-150 ease-in-out">
             <Link href="#features">Особливості</Link>
           </li>
-          <li className="hover:text-primary rounded-md p-2 transition-all duration-150 ease-in-out">
-            <Link href="#faq">FAQ</Link>
-          </li>
         </ul>
 
         <div className="flex items-center gap-4">

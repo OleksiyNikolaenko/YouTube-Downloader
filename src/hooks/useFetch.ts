@@ -9,11 +9,10 @@ export const useFetch = <T>(url: string, id: string | null) => {
     if (!id) return;
 
     const abort = new AbortController();
-    const getQualities = async () => {
+    const getData = async () => {
       try {
         setLoading(true);
-
-        const response = await fetch(url as string, {
+        const response = await fetch(url, {
           headers: {
             'x-rapidapi-key': `${process.env.NEXT_PUBLIC_API_KEY}`,
           },
@@ -31,7 +30,7 @@ export const useFetch = <T>(url: string, id: string | null) => {
       }
     };
 
-    getQualities();
+    getData();
 
     return () => {
       abort.abort();

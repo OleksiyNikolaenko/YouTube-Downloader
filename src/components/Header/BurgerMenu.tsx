@@ -53,11 +53,6 @@ export const BurgerMenu = () => {
               className="hover:text-primary rounded-md p-2">
               <Link href="#features">Особливості</Link>
             </li>
-            <li
-              onClick={() => setOpen((prev) => !prev)}
-              className="hover:text-primary rounded-md p-2">
-              <Link href="#faq">FAQ</Link>
-            </li>
           </ul>
         </DrawerContent>
       </Drawer>

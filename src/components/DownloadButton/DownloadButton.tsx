@@ -34,8 +34,8 @@ export const DownloadButton = () => {
     <Button
       disabled={isLoading}
       onClick={() => getVideo()}
-      className="font-manrope flex w-full items-center px-4 py-6 text-lg md:w-auto lg:w-auto">
-      <IoArrowDownSharp /> <p>Завантажити</p>
+      className="font-manrope flex items-center px-2 py-2 text-lg lg:px-4 lg:py-6">
+      <IoArrowDownSharp /> <p className="hidden sm:block">Завантажити</p>
     </Button>
   );
 };
